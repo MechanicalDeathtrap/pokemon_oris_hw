@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "Monserrat";
+  src: local("Monserrat"), url("src/assets/Montserrat/static/Montserrat-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Monserrat";
+  src: local("Monserrat"), url("src/assets/Montserrat/static/Montserrat-ExtraLight.ttf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Monserrat";
+  src: local("Monserrat"), url("src/assets/Montserrat/static/Montserrat-Medium.ttf");
+  font-weight: 400;
+}
+.header {
+  background-color: #0007DE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  margin: 40px 0;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.title {
+  color: white;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.inputBox {
+  display: flex;
+  gap: 10px;
+  background-color: white;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 5px 3px;
+}
+
+.svg {
+  margin-top: 3px;
+  margin-left: 5px;
+}
+
+.input {
+  height: 25px;
+  border: none;
+  width: 200px;
+  margin-top: 3px;
+}
+
+.input:focus {
+  border: none;
+}
+
+input::-webkit-input-placeholder {
+  font-family: "Monserrat", sans-serif;
+  color: lightgrey;
+}
+
+.button {
+  background-color: black;
+  font-weight: 200;
+  font-size: 10px;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.image {
+  width: 200px;
+}
+
+/*# sourceMappingURL=Header.module.css.map */
