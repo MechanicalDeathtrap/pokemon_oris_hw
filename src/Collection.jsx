@@ -3,7 +3,6 @@ import style from './Collection.module.sass'
 function Collection({property}){
 
     const pokemonList =[];
-    console.log("creating card");
     property.forEach((item) =>{
         pokemonList.push(
             <ul key={item.id} className={style.element}>
@@ -12,13 +11,12 @@ function Collection({property}){
                     <span>#{item.id}</span>
                 </div>
                 <img src={item.sprites.front_default} alt="pokemon" className={style.image}/>
-                <li>
+                <li className={style.abilitiesList}>
                     <Abilities property={item.types}/>
                 </li>
             </ul>
         )
     })
-    console.log("done with cards");
     return pokemonList
 }
 

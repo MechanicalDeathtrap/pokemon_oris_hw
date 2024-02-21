@@ -2,7 +2,6 @@ import './Abilities.sass'
 function Abilities({property}){
     const abilityList = []
 
-    console.log("fullfilling abilities");
     property.forEach((item) => {
 
         const style = item.type.name;

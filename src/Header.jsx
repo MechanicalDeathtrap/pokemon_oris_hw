@@ -1,6 +1,9 @@
 import styles from './Header.module.sass'
+import {useState} from "react";
 
 function Header(){
+    const [searchInput, setSearchInput] = useState('');
+
     return(
         <header className={styles.header}>
             <div className={styles.headerContainer}>
