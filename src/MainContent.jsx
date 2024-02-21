@@ -1,16 +1,28 @@
-
-
+import {create} from 'zustand'
 import style from './MainContainer.module.sass'
 import Abilities from "./Abilities.jsx";
 import {useEffect, useState} from "react";
 
+
+
 function MainContent(){
 
     const [pokemons, setPokemons] = useState([]);
-    const pokemonsList = []
+/*
+    const pokemonsProps = () =>{
+        return pokemons
+    }
+*/
+    const useStore = create((set)=> ({
+        pokemonList: [],
+        setPokemonsList: (pokemons) => set(() => ({pokemonList: pokemons})
+        )
+    }));
 
+    const addPokemon = useStore((state) => state.setPokemonsList)
+    const poke = useStore((state)=> state.pokemonList)
     const getPokemons = async () => {
-        await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=1`)
+        await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=2`)
             .then(response => response.json())
             .then(data =>
                 data.results.forEach(async (item) => {
@@ -18,30 +30,18 @@ function MainContent(){
                     const fetchData = await fetch(item.url);
                     const json = await fetchData.json();
                     setPokemons((list) => [...list, json])
-/*                    await fetch(item.url)
-                        .then((response) => response.json())
-                        .then((pokemon) => setPokemons(
-                            pokemonsList.push(
-                                pokemon
-                                /!*{
-                                name: pokemon.name,
-                                id: pokemon.id,
-                                sprites: pokemon.sprites,
-                                types: pokemon.types
-                            }*!/)
-                        ));*/
                 })
             )
-/*        await setPokemons(pokemonsList)*/
+        addPokemon(pokemons)
+
     }
     useEffect(() => {
-        console.log("use effect");
         getPokemons();
     }, []);
 
-    console.log(`pokemons2:${pokemonsList}`);
 
     if (pokemons.length > 0){
+
     return(
         <div className={style.mainContainer}>
             { pokemons.map(pokemon  =>(
