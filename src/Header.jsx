@@ -9,6 +9,7 @@ function Header(){
     const pokemons = useStore((state) => state.pokemonList);
     console.log(pokemons);
 
+
 /*    const pokemons = pokemonsProps();*/
     const searchPokemons = (searchValue) =>{
 

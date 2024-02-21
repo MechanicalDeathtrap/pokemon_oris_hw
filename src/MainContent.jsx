@@ -20,7 +20,6 @@ function MainContent(){
     }));
 
     const addPokemon = useStore((state) => state.setPokemonsList)
-    const poke = useStore((state)=> state.pokemonList)
     const getPokemons = async () => {
         await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=2`)
             .then(response => response.json())
