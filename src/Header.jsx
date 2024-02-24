@@ -1,20 +1,18 @@
 import styles from './Header.module.sass'
 import {useEffect, useState} from "react";
 import {usePokemonStore} from "./PokemonsStateStore.jsx"
-import {useSearchedPokemonStore} from "./SearchedStateStore.js";
+import {useSearchedPokemonStore} from "./SearchedStateStore.jsx";
 
 function Header(){
 
     const [searchInput, setSearchInput] = useState('');
     const [searchResult, setResult] = useState([]);
     const {pokemonsList} = usePokemonStore();
-    const {setSearchedList, searchedPokemonsList} = useSearchedPokemonStore()
+    const {setSearchedList } = useSearchedPokemonStore()
 
     useEffect(() => {
         if (searchInput.length !== 0) {
-            /*        if (searchInput.length != 0 ) {*/
             const filiteredPokemons = pokemonsList.filter((item) => {
-                console.log((item.pokemon.name).includes(searchInput.toLowerCase()), item.pokemon.name, searchInput);
                 return (item.pokemon.name).toLowerCase().includes(searchInput.toLowerCase())
             });
             console.log(filiteredPokemons);
@@ -27,12 +25,7 @@ function Header(){
 
     useEffect(() =>{
         setSearchedList(searchResult);
-        console.log(searchResult);
     }, [searchResult])
-
-/*    useEffect(() =>{
-        console.log(searchedPokemonsList);
-    }, [searchedPokemonsList])*/
 
     const searchPokemons = (value) =>{
         setSearchInput(value)

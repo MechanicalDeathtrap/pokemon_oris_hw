@@ -1,0 +1,20 @@
+@mixin desktop
+  @media screen and (min-width: $breakpoint-netbook-max)
+    @content
+
+@mixin netbook
+  @media screen and (min-width: $breakpoint-tablet-max) and (max-width: $breakpoint-netbook-max)
+    @content
+
+@mixin tablet
+  @media screen and (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-tablet-max)
+    @content
+
+@mixin mobile
+  @media screen and (min-width: $breakpoint-mobile-min) and (max-width: $breakpoint-tablet-min)
+    @content
+
+$breakpoint-netbook-max: 1280px
+$breakpoint-tablet-min: 768px
+$breakpoint-tablet-max: 1024px
+$breakpoint-mobile-min: 320px

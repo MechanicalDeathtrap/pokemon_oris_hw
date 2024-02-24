@@ -2,7 +2,7 @@ import './Abilities.sass'
 function Abilities({property}){
     const abilityList = []
 
-    property.forEach((item) => {
+    property.map((item) => {
 
         const style = item.type.name;
         abilityList.push(

@@ -2,7 +2,7 @@ import style from './MainContainer.module.sass'
 import Abilities from "./Abilities.jsx";
 import {useEffect} from "react";
 import {usePokemonStore} from "./PokemonsStateStore.jsx"
-import {useSearchedPokemonStore} from "./SearchedStateStore.js";
+import {useSearchedPokemonStore} from "./SearchedStateStore.jsx";
 
 function MainContent() {
 
@@ -40,7 +40,7 @@ function MainContent() {
                     <ul key={pokemon.pokemon.id} className={style.element}>
                         <div className={style.info}>
                             <span className={style.name}>{pokemon.pokemon.name}</span>
-                            <span>#{pokemon.pokemon.id}</span>
+                            <span className={style.id}>#{pokemon.pokemon.id}</span>
                         </div>
                         <img src={pokemon.pokemon.sprites.front_default} alt="pokemon" className={style.image}/>
                         <li className={style.abilitiesList}>

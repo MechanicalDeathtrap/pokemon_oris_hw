@@ -1,0 +1,25 @@
+.app {
+  margin: 0;
+  padding: 0;
+  font-family: "Monserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+title {
+  display: inline;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+input {
+  outline: none;
+}
+
+button {
+  border-radius: 20px;
+  border: none;
+}
+
+/*# sourceMappingURL=App.module.css.map */

@@ -1,18 +1,44 @@
+@import "Mixins.sass"
 
 .mainContainer
   width: 100%
   display: flex
   flex-wrap: wrap
-  padding: 20px
-  gap: 20px
   justify-content: center
   align-items: center
   box-sizing: border-box
+  @include desktop
+    padding: 20px
+    gap: 20px
+  @include netbook
+    padding: 15px
+    gap: 15px
+  @include tablet
+    padding: 10px
+    gap: 10px
+  @include tablet
+    padding: 5px
+    gap: 5px
 
 .info
   display: flex
+  box-sizing: border-box
   justify-content: space-between
-  padding: 10px
+
+  @include desktop
+    padding: 10px
+    height: 20px
+  @include netbook
+    padding: 7px
+    height: 17px
+  @include tablet
+    padding: 5px
+    height: 13px
+  @include mobile
+    padding: 3px
+    height: 10px
+
+  width: 100%
 
 .element
   box-shadow: 1px 5px 2pc lightblue
@@ -23,18 +49,32 @@
   margin-inline-start: 0
   margin-inline-end: 0
   padding: 0
-  width: 218px
+  width: 15% //218px
+  height: 30%
 
 .image
-  width: 200px
+  width: 75% //200px
 
 .name
   color: #0007DE
+  font-size: 0.85em
+  box-sizing: border-box
+
+.id
+  font-size: 0.85em
+  box-sizing: border-box
 
 .abilitiesList
   display: flex
-  gap: 10px
-  padding: 0 7px 27px 7px
+  justify-content: space-between
+  @include desktop
+    padding: 0 15px 27px 15px
+  @include netbook
+    padding: 0 12px 24px 12px
+  @include tablet
+    padding: 0 10px 21px 10px
+  @include mobile
+    padding: 0 7px 18px 7px
 
 .emptySearchContainer
   margin-top: 40px
