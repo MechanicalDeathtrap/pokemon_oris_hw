@@ -1,17 +1,17 @@
 import './Abilities.sass'
 function Abilities({property}){
     const abilityList = []
-
+if (property !== undefined){
     property.map((item) => {
 
         const style = item.type.name;
         abilityList.push(
-        <ul className={`${style} button`}>
-            <span className='text'>{style}</span>
-        </ul>
+            <li className={`${style} button`}>
+                <span className='text'>{style}</span>
+            </li>
         )
     })
-
+}
     return abilityList;
 }
 export default Abilities

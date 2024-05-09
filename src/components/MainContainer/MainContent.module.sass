@@ -1,12 +1,15 @@
-@import "Mixins.sass"
+@import "/src/mixins/Mixins.sass"
 
 .mainContainer
   width: 100%
   display: flex
   flex-wrap: wrap
-  justify-content: center
+  justify-content: start
   align-items: center
   box-sizing: border-box
+  text-decoration: none
+  font-family: "Monserrat", sans-serif
+  color: black
   @include desktop
     padding: 20px
     gap: 20px
@@ -15,15 +18,25 @@
     gap: 15px
   @include tablet
     padding: 10px
-    gap: 10px
-  @include tablet
-    padding: 5px
+    display: grid
+    justify-content: center
+    grid-auto-flow: row
+    grid-template-columns:  repeat(5, 15vw)
+    grid-gap: 20px 40px
+  @include mobile
+    padding: 10px
     gap: 5px
+    display: grid
+    grid-auto-flow: row
+    grid-template-columns:  repeat(2, 20vw)
+    grid-gap: 30px 30vw
 
 .info
   display: flex
   box-sizing: border-box
   justify-content: space-between
+  border-bottom: none
+  text-decoration: none
 
   @include desktop
     padding: 10px
@@ -35,12 +48,13 @@
     padding: 5px
     height: 13px
   @include mobile
-    padding: 3px
+    padding: 10px
     height: 10px
-
   width: 100%
 
 .element
+  display: flex
+  flex-direction: column
   box-shadow: 1px 5px 2pc lightblue
   border-radius: 10px
   list-style-type: none
@@ -49,26 +63,42 @@
   margin-inline-start: 0
   margin-inline-end: 0
   padding: 0
-  width: 15% //218px
+  text-decoration: none
+  box-sizing: border-box
+  width: 15vw //218px
   height: 30%
+  @include tablet
+    width: 18vw
+    height: 35vh
+  @include mobile
+    width: 40vw
+    height: 95%
 
 .image
   width: 75% //200px
+  padding: 10%
+  @include tablet
+    width: 100px
 
 .name
   color: #0007DE
   font-size: 0.85em
   box-sizing: border-box
+  text-decoration: none
+  border-bottom: none
 
 .id
   font-size: 0.85em
   box-sizing: border-box
+  text-decoration: none
+  color: black
 
 .abilitiesList
+  list-style-type: none
   display: flex
   justify-content: space-between
   @include desktop
-    padding: 0 15px 27px 15px
+    padding: 0 15px 20px 15px
   @include netbook
     padding: 0 12px 24px 12px
   @include tablet
