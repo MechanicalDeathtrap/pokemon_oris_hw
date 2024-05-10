@@ -35,7 +35,7 @@ function Header(){
 
     return(
         <>
-            <Link className={styles.header} to={"/pokemon"}>
+            <header className={styles.header} >
                 <div className={styles.headerContainer}>
                     <img src={pokeball} alt="poke-ball" className={styles.image}/>
                     <h1 className={styles.title}>Who are you looking for?</h1>
@@ -47,7 +47,7 @@ function Header(){
                         <button type='button' className={styles.button}>GO</button>
                     </div>
                 </div>
-            </Link>
+            </header>
 
         <Outlet/>
         </>
