@@ -19,7 +19,6 @@ function PokemonDetailsPage() {
             .then(data => {
                 setPokemonPageInfo(data);
                 setPokemonStats(data.stats)
-                setAbilities(data.abilities)
 
                 const moveTypes = []
                 const fetchMoves = data.moves.slice(0, 6).map(async move => {
@@ -34,6 +33,7 @@ function PokemonDetailsPage() {
                     Promise.all(fetchMoves).then(() => {
                         setMoves(moveTypes)
                     });
+                    setAbilities(data.abilities)
                 })
             })
     }
