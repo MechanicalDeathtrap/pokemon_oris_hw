@@ -37,7 +37,7 @@ function MainContent() {
 
     if (searchedPokemonsList.length > 0) {
         return (
-                <Link className={style.mainContainer }  to={"/pokemon"}>
+                <div className={style.mainContainer } >
                     {searchedPokemonsList.map(pokemon => (
                         <Link to={`/details/${pokemon.pokemon.name}`} key={pokemon.pokemon.id} className={style.element}>
                             <div className={style.info}>
@@ -54,7 +54,7 @@ function MainContent() {
                             </ul>
                         </Link>)
                     )}
-                </Link>
+                </div>
         )
 
     }
