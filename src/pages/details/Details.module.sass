@@ -1,0 +1,267 @@
+@import "/src/mixins/Mixins.sass"
+
+
+.container
+  display: flex
+  flex-direction: column
+  justify-content: center
+  padding-bottom: 100px
+
+.header
+  background-color: #0007DE
+  display: flex
+  justify-content: space-between
+  padding:  30px
+
+.image
+  width: 150px
+  position: absolute
+  right: 0
+  top: -60px
+  opacity: .6
+
+.arrow
+  width: 50px
+  fill: white
+
+.pageContainer
+  display: flex
+  flex-direction: column
+  margin-top: 30px
+  align-items: center
+  justify-content: center
+  font-family: "Monserrat", sans-serif
+  width: 100%
+
+.mainInfo
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+.mainInfoContainer
+  display: flex
+  flex-direction: column
+  gap: 50px
+  width: 80%
+  border-radius: 10px
+  box-shadow: 1px 5px 2pc lightblue
+  padding: 60px
+  box-sizing: border-box
+  @include mobile
+    padding: 10px
+
+
+.centralContainer
+  display: flex
+  flex-direction: column
+  gap: 30px
+  width: 100%
+  box-sizing: border-box
+  align-items: center
+
+.breedingTitle
+  color: grey
+  font-size: 20px
+
+.smallMainInfo
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.pokemonsNameContainer
+  display: flex
+  flex-direction: column
+  gap: 10px
+
+.pokemonsId
+  font-size: 16px
+
+.pokemonsName
+  font-size: 30px
+  color: #0007DE
+  font-weight: 600
+
+.pokemonsName::first-letter
+  text-transform: uppercase
+
+.statsContainer
+  display: flex
+  justify-content: space-between
+
+.pokemonImage
+  width: 300px
+  @include tablet
+    width: 30vw
+  @include mobile
+    width: 40vw
+
+.statsContainer
+  display: flex
+  gap: 15px
+
+.stats
+  width: 40vw
+
+.progressBar
+  width: 25vw
+  height: 10px
+  border-radius: 10px
+
+.HPProgressBar
+  background-color: rgb(#60D394, 0.5)
+
+.HPProgress
+  background-color: #60D394
+  height: 10px
+  border-radius: 10px
+
+.AttackProgressBar
+  background-color: rgb(#F14B3D, 0.5)
+
+.AttackProgress
+  background-color: #F14B3D
+  height: 10px
+  border-radius: 10px
+
+.defenceProgressBar
+  background-color: rgb(#FDD85D, 0.5)
+
+.defenceProgress
+  background-color: #FDD85D
+  height: 10px
+  border-radius: 10px
+
+.speedProgressBar
+  background-color: rgb(#FF844F, 0.5)
+
+.speedProgress
+  background-color: #FF844F
+  height: 10px
+  border-radius: 10px
+
+.stats
+  display: flex
+  flex-direction: column
+  gap: 20px
+  @include mobile
+    gap: 10px
+
+.statsItem
+  display: flex
+  flex-direction: column
+  gap: 5px
+
+progress
+  background-color: transparent
+
+progress::-webkit-progress-bar
+  background-color: lightgrey
+  border-radius: 10px
+  height: 10px
+
+progress::-webkit-progress-value
+  background-color: rgb(115,255,128)
+  border-radius: 10px
+
+.title
+  font-size: 30px
+  font-weight: 300
+  margin: 0
+
+.breedingInformation
+  display: flex
+  justify-content: space-between
+  font-size: 17px
+
+.height, .weight
+  display: flex
+  flex-direction: column
+  gap: 10px
+  text-align: center
+  width: 48%
+
+.heightStats , .weightStats
+  padding: 15px 0
+  border-radius: 10px
+  border: 1px solid lightgrey
+  background-color: rgb(250,250,250)
+  display: flex
+  justify-content: center
+  gap: 15px
+  color: grey
+  font-size: 20px
+  @include mobile
+    font-size: 13px
+
+
+.move
+  list-style-type: none
+  padding: 20px 10px
+  display: flex
+  flex-direction: column
+  align-items: center
+  border-radius: 20px
+
+.movesList
+  padding: 0
+  margin: 0
+  display: grid
+  justify-content: center
+  grid-auto-flow: row
+  grid-template-columns:  repeat(3, 31%)
+  grid-gap: 30px 30px
+
+.normal
+  background-color: grey
+
+.moveName
+  color: white
+  font-size: 16px
+  @include tablet
+    font-size: 14px
+  @include mobile
+    font-size: 12px
+
+
+.moveName::first-letter
+  text-transform: uppercase
+
+.abilitiesList
+  list-style-type: none
+  display: flex
+  gap: 20px
+  justify-content: center
+
+.ability
+  background-color: #FDD85D
+  border-radius: 10px
+  padding: 10px 20px
+  display: flex
+  flex-direction: column
+  gap: 20px
+  align-items: center
+  width: 30%
+
+.firstLetterLogo, .abilityTitle
+  font-size: 20px
+
+.secondAbility
+  background-color: #FF7744
+
+.firstLetterLogo
+  text-transform: uppercase
+  background-color: white
+  color: #FDD85D
+  padding: 5px 9px
+  border-radius: 20px
+
+.abilityTitle
+  color: white
+  @include mobile
+    font-size: 12px
+
+.abilityTitle::first-letter
+  text-transform: uppercase
+
+.secondAbilityLogo
+  color: #FF7744
