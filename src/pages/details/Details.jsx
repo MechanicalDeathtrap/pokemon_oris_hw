@@ -3,6 +3,8 @@ import {Link, useParams} from "react-router-dom";
 import style from "./Details.module.sass"
 import Abilities from "../../components/Abilities/Abilities.jsx";
 import {MoveTypes} from "../../utils/MoveTypes/MoveTypes.js";
+import pokeball from "/src/assets/pokeball.png"
+import arrow from "/src/assets/arrow-sm-left-svgrepo-com.svg"
 
 function PokemonDetailsPage() {
 //useParams
@@ -45,10 +47,10 @@ function PokemonDetailsPage() {
 
         return (
             <div className={style.container}>
-                <Link to={"/pokemon"}>
+                <Link to={"/"}>
                     <header className={style.header}>
-                        <img src="/src/assets/arrow-sm-left-svgrepo-com.svg" alt="arrow" className={style.arrow}/>
-                        <img src="/src/assets/pokeball.png" alt="poke-ball" className={style.image}/>
+                        <img src={arrow} alt="arrow" className={style.arrow}/>
+                        <img src={pokeball} alt="poke-ball" className={style.image}/>
                     </header>
                 </Link>
                 <div className={style.pageContainer}>
