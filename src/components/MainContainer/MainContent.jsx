@@ -13,7 +13,7 @@ function MainContent() {
     const {searchedPokemonsList, setSearchedList} = useSearchedPokemonStore();
 
     const getPokemons = async () => {
-        await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=10`) //totalCount - скок всего
+        await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=300`) //totalCount - скок всего
             .then(response => response.json())
             .then(data =>
                 data.results.forEach(async (item) => {
